@@ -27,6 +27,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <sys/time.h>
+#include <string.h>
 
 #include "common.h"
 #include "array_defs.h"
@@ -3965,157 +3966,461 @@ int main(int argc, char ** argv){
     init(&ip, &s1, &s2);
     printf("Loop \tTime(sec) \tChecksum\n");
 
-    time_function(&s000, NULL);
-    time_function(&s111, NULL);
-    time_function(&s1111, NULL);
-    time_function(&s112, NULL);
-    time_function(&s1112, NULL);
-    time_function(&s113, NULL);
-    time_function(&s1113, NULL);
-    time_function(&s114, NULL);
-    time_function(&s115, NULL);
-    time_function(&s1115, NULL);
-    time_function(&s116, NULL);
-    time_function(&s118, NULL);
-    time_function(&s119, NULL);
-    time_function(&s1119, NULL);
-    time_function(&s121, NULL);
-    time_function(&s122, &(struct{int a;int b;}){n1, n3});
-    time_function(&s123, NULL);
-    time_function(&s124, NULL);
-    time_function(&s125, NULL);
-    time_function(&s126, NULL);
-    time_function(&s127, NULL);
-    time_function(&s128, NULL);
-    time_function(&s131, NULL);
-    time_function(&s132, NULL);
-    time_function(&s141, NULL);
-    time_function(&s151, NULL);
-    time_function(&s152, NULL);
-    time_function(&s161, NULL);
-    time_function(&s1161, NULL);
-    time_function(&s162, &n1);
-    time_function(&s171, &n1);
-    time_function(&s172, &(struct{int a;int b;}){n1, n3});
-    time_function(&s173, NULL);
-    time_function(&s174, &(struct{int a;}){LEN_1D/2});
-    time_function(&s175, &n1);
-    time_function(&s176, NULL);
-    time_function(&s211, NULL);
-    time_function(&s212, NULL);
-    time_function(&s1213, NULL);
-    time_function(&s221, NULL);
-    time_function(&s1221, NULL);
-    time_function(&s222, NULL);
-    time_function(&s231, NULL);
-    time_function(&s232, NULL);
-    time_function(&s1232, NULL);
-    time_function(&s233, NULL);
-    time_function(&s2233, NULL);
-    time_function(&s235, NULL);
-    time_function(&s241, NULL);
-    time_function(&s242, &(struct{real_t a;real_t b;}){s1, s2});
-    time_function(&s243, NULL);
-    time_function(&s244, NULL);
-    time_function(&s1244, NULL);
-    time_function(&s2244, NULL);
-    time_function(&s251, NULL);
-    time_function(&s1251, NULL);
-    time_function(&s2251, NULL);
-    time_function(&s3251, NULL);
-    time_function(&s252, NULL);
-    time_function(&s253, NULL);
-    time_function(&s254, NULL);
-    time_function(&s255, NULL);
-    time_function(&s256, NULL);
-    time_function(&s257, NULL);
-    time_function(&s258, NULL);
-    time_function(&s261, NULL);
-    time_function(&s271, NULL);
-    time_function(&s272, &s1);
-    time_function(&s273, NULL);
-    time_function(&s274, NULL);
-    time_function(&s275, NULL);
-    time_function(&s2275, NULL);
-    time_function(&s276, NULL);
-    time_function(&s277, NULL);
-    time_function(&s278, NULL);
-    time_function(&s279, NULL);
-    time_function(&s1279, NULL);
-    time_function(&s2710, &s1);
-    time_function(&s2711, NULL);
-    time_function(&s2712, NULL);
-    time_function(&s281, NULL);
-    time_function(&s1281, NULL);
-    time_function(&s291, NULL);
-    time_function(&s292, NULL);
-    time_function(&s293, NULL);
-    time_function(&s2101, NULL);
-    time_function(&s2102, NULL);
-    time_function(&s2111, NULL);
-    time_function(&s311, NULL);
-    time_function(&s31111, NULL);
-    time_function(&s312, NULL);
-    time_function(&s313, NULL);
-    time_function(&s314, NULL);
-    time_function(&s315, NULL);
-    time_function(&s316, NULL);
-    time_function(&s317, NULL);
-    time_function(&s318, &n1);
-    time_function(&s319, NULL);
-    time_function(&s3110, NULL);
-    time_function(&s13110, NULL);
-    time_function(&s3111, NULL);
-    time_function(&s3112, NULL);
-    time_function(&s3113, NULL);
-    time_function(&s321, NULL);
-    time_function(&s322, NULL);
-    time_function(&s323, NULL);
-    time_function(&s331, NULL);
-    time_function(&s332, &s1);
-    time_function(&s341, NULL);
-    time_function(&s342, NULL);
-    time_function(&s343, NULL);
-    time_function(&s351, NULL);
-    time_function(&s1351, NULL);
-    time_function(&s352, NULL);
-    time_function(&s353, ip);
-    time_function(&s421, NULL);
-    time_function(&s1421, NULL);
-    time_function(&s422, NULL);
-    time_function(&s423, NULL);
-    time_function(&s424, NULL);
-    time_function(&s431, NULL);
-    time_function(&s441, NULL);
-    time_function(&s442, NULL);
-    time_function(&s443, NULL);
-    time_function(&s451, NULL);
-    time_function(&s452, NULL);
-    time_function(&s453, NULL);
-    time_function(&s471, NULL);
-    time_function(&s481, NULL);
-    time_function(&s482, NULL);
-    time_function(&s491, ip);
-    time_function(&s4112, &(struct{int*a;real_t b;}){ip, s1});
-    time_function(&s4113, ip);
-    time_function(&s4114, &(struct{int*a;int b;}){ip, n1});
-    time_function(&s4115, ip);
-    time_function(&s4116, &(struct{int * a; int b; int c;}){ip, LEN_2D/2, n1});
-    time_function(&s4117, NULL);
-    time_function(&s4121, NULL);
-    time_function(&va, NULL);
-    time_function(&vag, ip);
-    time_function(&vas, ip);
-    time_function(&vif, NULL);
-    time_function(&vpv, NULL);
-    time_function(&vtv, NULL);
-    time_function(&vpvtv, NULL);
-    time_function(&vpvts, &s1);
-    time_function(&vpvpv, NULL);
-    time_function(&vtvtv, NULL);
-    time_function(&vsumr, NULL);
-    time_function(&vdotr, NULL);
-    time_function(&vbor, NULL);
-
+    if(argc == 2) {
+        if(strcmp(argv[1], "s000") == 0)
+            time_function(&s000, NULL);
+        if(strcmp(argv[1], "s111") == 0)
+            time_function(&s111, NULL);
+        if(strcmp(argv[1], "s1111") == 0)
+            time_function(&s1111, NULL);
+        if(strcmp(argv[1], "s112") == 0)
+            time_function(&s112, NULL);
+        if(strcmp(argv[1], "s1112") == 0)
+            time_function(&s1112, NULL);
+        if(strcmp(argv[1], "s113") == 0)
+            time_function(&s113, NULL);
+        if(strcmp(argv[1], "s1113") == 0)
+            time_function(&s1113, NULL);
+        if(strcmp(argv[1], "s114") == 0)
+            time_function(&s114, NULL);
+        if(strcmp(argv[1], "s115") == 0)
+            time_function(&s115, NULL);
+        if(strcmp(argv[1], "s1115") == 0)
+            time_function(&s1115, NULL);
+        if(strcmp(argv[1], "s116") == 0)
+            time_function(&s116, NULL);
+        if(strcmp(argv[1], "s118") == 0)
+            time_function(&s118, NULL);
+        if(strcmp(argv[1], "s119") == 0)
+            time_function(&s119, NULL);
+        if(strcmp(argv[1], "s1119") == 0)
+            time_function(&s1119, NULL);
+        if(strcmp(argv[1], "s121") == 0)
+            time_function(&s121, NULL);
+        if(strcmp(argv[1], "s122") == 0)
+            time_function(&s122, &(struct{int a;int b;}){n1, n3});
+        if(strcmp(argv[1], "s123") == 0)
+            time_function(&s123, NULL);
+        if(strcmp(argv[1], "s124") == 0)
+            time_function(&s124, NULL);
+        if(strcmp(argv[1], "s125") == 0)
+            time_function(&s125, NULL);
+        if(strcmp(argv[1], "s126") == 0)
+            time_function(&s126, NULL);
+        if(strcmp(argv[1], "s127") == 0)
+            time_function(&s127, NULL);
+        if(strcmp(argv[1], "s128") == 0)
+            time_function(&s128, NULL);
+        if(strcmp(argv[1], "s131") == 0)
+            time_function(&s131, NULL);
+        if(strcmp(argv[1], "s132") == 0)
+            time_function(&s132, NULL);
+        if(strcmp(argv[1], "s141") == 0)
+            time_function(&s141, NULL);
+        if(strcmp(argv[1], "s151") == 0)
+            time_function(&s151, NULL);
+        if(strcmp(argv[1], "s152") == 0)
+            time_function(&s152, NULL);
+        if(strcmp(argv[1], "s161") == 0)
+            time_function(&s161, NULL);
+        if(strcmp(argv[1], "s1161") == 0)
+            time_function(&s1161, NULL);
+        if(strcmp(argv[1], "s162") == 0)
+            time_function(&s162, &n1);
+        if(strcmp(argv[1], "s171") == 0)
+            time_function(&s171, &n1);
+        if(strcmp(argv[1], "s172") == 0)
+            time_function(&s172, &(struct{int a;int b;}){n1, n3});
+        if(strcmp(argv[1], "s173") == 0)
+            time_function(&s173, NULL);
+        if(strcmp(argv[1], "s174") == 0)
+            time_function(&s174, &(struct{int a;}){LEN_1D/2});
+        if(strcmp(argv[1], "s175") == 0)
+            time_function(&s175, &n1);
+        if(strcmp(argv[1], "s176") == 0)
+            time_function(&s176, NULL);
+        if(strcmp(argv[1], "s211") == 0)
+            time_function(&s211, NULL);
+        if(strcmp(argv[1], "s212") == 0)
+            time_function(&s212, NULL);
+        if(strcmp(argv[1], "s1213") == 0)
+            time_function(&s1213, NULL);
+        if(strcmp(argv[1], "s221") == 0)
+            time_function(&s221, NULL);
+        if(strcmp(argv[1], "s1221") == 0)
+            time_function(&s1221, NULL);
+        if(strcmp(argv[1], "s222") == 0)
+            time_function(&s222, NULL);
+        if(strcmp(argv[1], "s231") == 0)
+            time_function(&s231, NULL);
+        if(strcmp(argv[1], "s232") == 0)
+            time_function(&s232, NULL);
+        if(strcmp(argv[1], "s1232") == 0)
+            time_function(&s1232, NULL);
+        if(strcmp(argv[1], "s233") == 0)
+            time_function(&s233, NULL);
+        if(strcmp(argv[1], "s2233") == 0)
+            time_function(&s2233, NULL);
+        if(strcmp(argv[1], "s235") == 0)
+            time_function(&s235, NULL);
+        if(strcmp(argv[1], "s241") == 0)
+            time_function(&s241, NULL);
+        if(strcmp(argv[1], "s242") == 0)
+            time_function(&s242, &(struct{real_t a;real_t b;}){s1, s2});
+        if(strcmp(argv[1], "s243") == 0)
+            time_function(&s243, NULL);
+        if(strcmp(argv[1], "s244") == 0)
+            time_function(&s244, NULL);
+        if(strcmp(argv[1], "s1244") == 0)
+            time_function(&s1244, NULL);
+        if(strcmp(argv[1], "s2244") == 0)
+            time_function(&s2244, NULL);
+        if(strcmp(argv[1], "s251") == 0)
+            time_function(&s251, NULL);
+        if(strcmp(argv[1], "s1251") == 0)
+            time_function(&s1251, NULL);
+        if(strcmp(argv[1], "s2251") == 0)
+            time_function(&s2251, NULL);
+        if(strcmp(argv[1], "s321") == 0)
+            time_function(&s3251, NULL);
+        if(strcmp(argv[1], "s252") == 0)
+            time_function(&s252, NULL);
+        if(strcmp(argv[1], "s253") == 0)
+            time_function(&s253, NULL);
+        if(strcmp(argv[1], "s254") == 0)
+            time_function(&s254, NULL);
+        if(strcmp(argv[1], "s255") == 0)
+            time_function(&s255, NULL);
+        if(strcmp(argv[1], "s256") == 0)
+            time_function(&s256, NULL);
+        if(strcmp(argv[1], "s257") == 0)
+            time_function(&s257, NULL);
+        if(strcmp(argv[1], "s258") == 0)
+            time_function(&s258, NULL);
+        if(strcmp(argv[1], "s261") == 0)
+            time_function(&s261, NULL);
+        if(strcmp(argv[1], "s271") == 0)
+            time_function(&s271, NULL);
+        if(strcmp(argv[1], "s272") == 0)
+            time_function(&s272, &s1);
+        if(strcmp(argv[1], "s273") == 0)
+            time_function(&s273, NULL);
+        if(strcmp(argv[1], "s274") == 0)
+            time_function(&s274, NULL);
+        if(strcmp(argv[1], "s275") == 0)
+            time_function(&s275, NULL);
+        if(strcmp(argv[1], "s2275") == 0)
+            time_function(&s2275, NULL);
+        if(strcmp(argv[1], "s276") == 0)
+            time_function(&s276, NULL);
+        if(strcmp(argv[1], "s277") == 0)
+            time_function(&s277, NULL);
+        if(strcmp(argv[1], "s278") == 0)
+            time_function(&s278, NULL);
+        if(strcmp(argv[1], "s279") == 0)
+            time_function(&s279, NULL);
+        if(strcmp(argv[1], "s1279") == 0)
+            time_function(&s1279, NULL);
+        if(strcmp(argv[1], "s2710") == 0)
+            time_function(&s2710, &s1);
+        if(strcmp(argv[1], "s2711") == 0)
+            time_function(&s2711, NULL);
+        if(strcmp(argv[1], "s2712") == 0)
+            time_function(&s2712, NULL);
+        if(strcmp(argv[1], "s281") == 0)
+            time_function(&s281, NULL);
+        if(strcmp(argv[1], "s1281") == 0)
+            time_function(&s1281, NULL);
+        if(strcmp(argv[1], "s291") == 0)
+            time_function(&s291, NULL);
+        if(strcmp(argv[1], "s292") == 0)
+            time_function(&s292, NULL);
+        if(strcmp(argv[1], "s293") == 0)
+            time_function(&s293, NULL);
+        if(strcmp(argv[1], "s2101") == 0)
+            time_function(&s2101, NULL);
+        if(strcmp(argv[1], "s2102") == 0)
+            time_function(&s2102, NULL);
+        if(strcmp(argv[1], "s2111") == 0)
+            time_function(&s2111, NULL);
+        if(strcmp(argv[1], "s311") == 0)
+            time_function(&s311, NULL);
+        if(strcmp(argv[1], "s31111") == 0)
+            time_function(&s31111, NULL);
+        if(strcmp(argv[1], "s312") == 0)
+            time_function(&s312, NULL);
+        if(strcmp(argv[1], "s313") == 0)
+            time_function(&s313, NULL);
+        if(strcmp(argv[1], "s314") == 0)
+            time_function(&s314, NULL);
+        if(strcmp(argv[1], "s315") == 0)
+            time_function(&s315, NULL);
+        if(strcmp(argv[1], "s316") == 0)
+            time_function(&s316, NULL);
+        if(strcmp(argv[1], "s317") == 0)
+            time_function(&s317, NULL);
+        if(strcmp(argv[1], "s318") == 0)
+            time_function(&s318, &n1);
+        if(strcmp(argv[1], "s319") == 0)
+            time_function(&s319, NULL);
+        if(strcmp(argv[1], "s3110") == 0)
+            time_function(&s3110, NULL);
+        if(strcmp(argv[1], "s13110") == 0)
+            time_function(&s13110, NULL);
+        if(strcmp(argv[1], "s3111") == 0)
+            time_function(&s3111, NULL);
+        if(strcmp(argv[1], "s3112") == 0)
+            time_function(&s3112, NULL);
+        if(strcmp(argv[1], "s3113") == 0)
+            time_function(&s3113, NULL);
+        if(strcmp(argv[1], "s321") == 0)
+            time_function(&s321, NULL);
+        if(strcmp(argv[1], "s322") == 0)
+            time_function(&s322, NULL);
+        if(strcmp(argv[1], "s323") == 0)
+            time_function(&s323, NULL);
+        if(strcmp(argv[1], "s331") == 0)
+            time_function(&s331, NULL);
+        if(strcmp(argv[1], "s332") == 0)
+            time_function(&s332, &s1);
+        if(strcmp(argv[1], "s341") == 0)
+            time_function(&s341, NULL);
+        if(strcmp(argv[1], "s342") == 0)
+            time_function(&s342, NULL);
+        if(strcmp(argv[1], "s343") == 0)
+            time_function(&s343, NULL);
+        if(strcmp(argv[1], "s351") == 0)
+            time_function(&s351, NULL);
+        if(strcmp(argv[1], "s1351") == 0)
+            time_function(&s1351, NULL);
+        if(strcmp(argv[1], "s352") == 0)
+            time_function(&s352, NULL);
+        if(strcmp(argv[1], "s353") == 0)
+            time_function(&s353, ip);
+        if(strcmp(argv[1], "s421") == 0)
+            time_function(&s421, NULL);
+        if(strcmp(argv[1], "s1421") == 0)
+            time_function(&s1421, NULL);
+        if(strcmp(argv[1], "s422") == 0)
+            time_function(&s422, NULL);
+        if(strcmp(argv[1], "s423") == 0)
+            time_function(&s423, NULL);
+        if(strcmp(argv[1], "s424") == 0)
+            time_function(&s424, NULL);
+        if(strcmp(argv[1], "s431") == 0)
+            time_function(&s431, NULL);
+        if(strcmp(argv[1], "s441") == 0)
+            time_function(&s441, NULL);
+        if(strcmp(argv[1], "s442") == 0)
+            time_function(&s442, NULL);
+        if(strcmp(argv[1], "s443") == 0)
+            time_function(&s443, NULL);
+        if(strcmp(argv[1], "s451") == 0)
+            time_function(&s451, NULL);
+        if(strcmp(argv[1], "s452") == 0)
+            time_function(&s452, NULL);
+        if(strcmp(argv[1], "s453") == 0)
+            time_function(&s453, NULL);
+        if(strcmp(argv[1], "s471") == 0)
+            time_function(&s471, NULL);
+        if(strcmp(argv[1], "s481") == 0)
+            time_function(&s481, NULL);
+        if(strcmp(argv[1], "s482") == 0)
+            time_function(&s482, NULL);
+        if(strcmp(argv[1], "s491") == 0)
+            time_function(&s491, ip);
+        if(strcmp(argv[1], "s4112") == 0)
+            time_function(&s4112, &(struct{int*a;real_t b;}){ip, s1});
+        if(strcmp(argv[1], "s4113") == 0)
+            time_function(&s4113, ip);
+        if(strcmp(argv[1], "s4114") == 0)
+            time_function(&s4114, &(struct{int*a;int b;}){ip, n1});
+        if(strcmp(argv[1], "s4115") == 0)
+            time_function(&s4115, ip);
+        if(strcmp(argv[1], "s4116") == 0)
+            time_function(&s4116, &(struct{int * a; int b; int c;}){ip, LEN_2D/2, n1});
+        if(strcmp(argv[1], "s4117") == 0)
+            time_function(&s4117, NULL);
+        if(strcmp(argv[1], "s4121") == 0)
+            time_function(&s4121, NULL);
+        if(strcmp(argv[1], "va") == 0)
+            time_function(&va, NULL);
+        if(strcmp(argv[1], "vag") == 0)
+            time_function(&vag, ip);
+        if(strcmp(argv[1], "vas") == 0)
+            time_function(&vas, ip);
+        if(strcmp(argv[1], "vif") == 0)
+            time_function(&vif, NULL);
+        if(strcmp(argv[1], "vpv") == 0)
+            time_function(&vpv, NULL);
+        if(strcmp(argv[1], "vtv") == 0)
+            time_function(&vtv, NULL);
+        if(strcmp(argv[1], "vpvtv") == 0)
+            time_function(&vpvtv, NULL);
+        if(strcmp(argv[1], "vpvts") == 0)
+            time_function(&vpvts, &s1);
+        if(strcmp(argv[1], "vpvpv") == 0)
+            time_function(&vpvpv, NULL);
+        if(strcmp(argv[1], "vtvtv") == 0)
+            time_function(&vtvtv, NULL);
+        if(strcmp(argv[1], "vsumr") == 0)
+            time_function(&vsumr, NULL);
+        if(strcmp(argv[1], "vdotr") == 0)
+            time_function(&vdotr, NULL);
+        if(strcmp(argv[1], "vbor") == 0)
+            time_function(&vbor, NULL);
+    }else {
+        time_function(&s000, NULL);
+        time_function(&s111, NULL);
+        time_function(&s1111, NULL);
+        time_function(&s112, NULL);
+        time_function(&s1112, NULL);
+        time_function(&s113, NULL);
+        time_function(&s1113, NULL);
+        time_function(&s114, NULL);
+        time_function(&s115, NULL);
+        time_function(&s1115, NULL);
+        time_function(&s116, NULL);
+        time_function(&s118, NULL);
+        time_function(&s119, NULL);
+        time_function(&s1119, NULL);
+        time_function(&s121, NULL);
+        time_function(&s122, &(struct{int a;int b;}){n1, n3});
+        time_function(&s123, NULL);
+        time_function(&s124, NULL);
+        time_function(&s125, NULL);
+        time_function(&s126, NULL);
+        time_function(&s127, NULL);
+        time_function(&s128, NULL);
+        time_function(&s131, NULL);
+        time_function(&s132, NULL);
+        time_function(&s141, NULL);
+        time_function(&s151, NULL);
+        time_function(&s152, NULL);
+        time_function(&s161, NULL);
+        time_function(&s1161, NULL);
+        time_function(&s162, &n1);
+        time_function(&s171, &n1);
+        time_function(&s172, &(struct{int a;int b;}){n1, n3});
+        time_function(&s173, NULL);
+        time_function(&s174, &(struct{int a;}){LEN_1D/2});
+        time_function(&s175, &n1);
+        time_function(&s176, NULL);
+        time_function(&s211, NULL);
+        time_function(&s212, NULL);
+        time_function(&s1213, NULL);
+        time_function(&s221, NULL);
+        time_function(&s1221, NULL);
+        time_function(&s222, NULL);
+        time_function(&s231, NULL);
+        time_function(&s232, NULL);
+        time_function(&s1232, NULL);
+        time_function(&s233, NULL);
+        time_function(&s2233, NULL);
+        time_function(&s235, NULL);
+        time_function(&s241, NULL);
+        time_function(&s242, &(struct{real_t a;real_t b;}){s1, s2});
+        time_function(&s243, NULL);
+        time_function(&s244, NULL);
+        time_function(&s1244, NULL);
+        time_function(&s2244, NULL);
+        time_function(&s251, NULL);
+        time_function(&s1251, NULL);
+        time_function(&s2251, NULL);
+        time_function(&s3251, NULL);
+        time_function(&s252, NULL);
+        time_function(&s253, NULL);
+        time_function(&s254, NULL);
+        time_function(&s255, NULL);
+        time_function(&s256, NULL);
+        time_function(&s257, NULL);
+        time_function(&s258, NULL);
+        time_function(&s261, NULL);
+        time_function(&s271, NULL);
+        time_function(&s272, &s1);
+        time_function(&s273, NULL);
+        time_function(&s274, NULL);
+        time_function(&s275, NULL);
+        time_function(&s2275, NULL);
+        time_function(&s276, NULL);
+        time_function(&s277, NULL);
+        time_function(&s278, NULL);
+        time_function(&s279, NULL);
+        time_function(&s1279, NULL);
+        time_function(&s2710, &s1);
+        time_function(&s2711, NULL);
+        time_function(&s2712, NULL);
+        time_function(&s281, NULL);
+        time_function(&s1281, NULL);
+        time_function(&s291, NULL);
+        time_function(&s292, NULL);
+        time_function(&s293, NULL);
+        time_function(&s2101, NULL);
+        time_function(&s2102, NULL);
+        time_function(&s2111, NULL);
+        time_function(&s311, NULL);
+        time_function(&s31111, NULL);
+        time_function(&s312, NULL);
+        time_function(&s313, NULL);
+        time_function(&s314, NULL);
+        time_function(&s315, NULL);
+        time_function(&s316, NULL);
+        time_function(&s317, NULL);
+        time_function(&s318, &n1);
+        time_function(&s319, NULL);
+        time_function(&s3110, NULL);
+        time_function(&s13110, NULL);
+        time_function(&s3111, NULL);
+        time_function(&s3112, NULL);
+        time_function(&s3113, NULL);
+        time_function(&s321, NULL);
+        time_function(&s322, NULL);
+        time_function(&s323, NULL);
+        time_function(&s331, NULL);
+        time_function(&s332, &s1);
+        time_function(&s341, NULL);
+        time_function(&s342, NULL);
+        time_function(&s343, NULL);
+        time_function(&s351, NULL);
+        time_function(&s1351, NULL);
+        time_function(&s352, NULL);
+        time_function(&s353, ip);
+        time_function(&s421, NULL);
+        time_function(&s1421, NULL);
+        time_function(&s422, NULL);
+        time_function(&s423, NULL);
+        time_function(&s424, NULL);
+        time_function(&s431, NULL);
+        time_function(&s441, NULL);
+        time_function(&s442, NULL);
+        time_function(&s443, NULL);
+        time_function(&s451, NULL);
+        time_function(&s452, NULL);
+        time_function(&s453, NULL);
+        time_function(&s471, NULL);
+        time_function(&s481, NULL);
+        time_function(&s482, NULL);
+        time_function(&s491, ip);
+        time_function(&s4112, &(struct{int*a;real_t b;}){ip, s1});
+        time_function(&s4113, ip);
+        time_function(&s4114, &(struct{int*a;int b;}){ip, n1});
+        time_function(&s4115, ip);
+        time_function(&s4116, &(struct{int * a; int b; int c;}){ip, LEN_2D/2, n1});
+        time_function(&s4117, NULL);
+        time_function(&s4121, NULL);
+        time_function(&va, NULL);
+        time_function(&vag, ip);
+        time_function(&vas, ip);
+        time_function(&vif, NULL);
+        time_function(&vpv, NULL);
+        time_function(&vtv, NULL);
+        time_function(&vpvtv, NULL);
+        time_function(&vpvts, &s1);
+        time_function(&vpvpv, NULL);
+        time_function(&vtvtv, NULL);
+        time_function(&vsumr, NULL);
+        time_function(&vdotr, NULL);
+        time_function(&vbor, NULL);        
+    }
     return EXIT_SUCCESS;
 }
