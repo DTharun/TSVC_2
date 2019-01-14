@@ -4081,7 +4081,7 @@ int main(int argc, char ** argv){
             time_function(&s1251, NULL);
         if(strcmp(argv[1], "s2251") == 0)
             time_function(&s2251, NULL);
-        if(strcmp(argv[1], "s321") == 0)
+        if(strcmp(argv[1], "s3251") == 0)
             time_function(&s3251, NULL);
         if(strcmp(argv[1], "s252") == 0)
             time_function(&s252, NULL);
